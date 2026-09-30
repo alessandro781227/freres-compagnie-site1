@@ -1,0 +1,95 @@
+
+.faces-track{
+  position:absolute;left:0;top:0;height:100%;width:200%;
+  display:flex;align-items:center;overflow:hidden;pointer-events:none
+}
+.faces{
+  display:flex;align-items:center;gap:54px;min-width:max-content;
+  animation:faces 26s linear infinite;opacity:.12
+}
+.faces img{width:84px;height:103px;object-fit:contain}
+@keyframes faces{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.identity-caption{
+  position:absolute;inset:0;z-index:5;display:grid;place-items:center;text-align:center;padding:0 24px;
+  color:rgba(255,255,255,.72);font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase
+}
+.identity-caption:after{
+  content:"";position:absolute;left:50%;bottom:36px;transform:translateX(-50%);
+  width:54px;height:2px;background:var(--green)
+}
+
+/* --- SIMPLE M² COUNTER ONLY --- */
+.counter-journey{height:126vh;position:relative}
+.counter-journey .sticky{
+  position:sticky;top:90px;height:calc(100vh - 112px);
+  display:grid;place-items:center;overflow:hidden
+}
+.counter-world{position:relative;width:min(1220px,92vw);height:min(660px,84vh)}
+.counter-panel{
+  position:absolute;inset:0;border-radius:36px;border:1px solid var(--line);
+  background:linear-gradient(145deg,#0f130f,#171b18);box-shadow:var(--shadow);overflow:hidden
+}
+.counter-panel:before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent 96%)
+}
+.counter-glow{
+  position:absolute;right:-70px;top:-70px;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle,rgba(67,182,77,.14),transparent 68%)
+}
+.counter-label{
+  position:absolute;left:24px;top:22px;z-index:10;padding:11px 15px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.28);
+  color:#dce0dd;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase
+}
+.counter-core{
+  position:absolute;inset:0;display:grid;place-items:center;padding:90px 28px 52px
+}
+.counter-block{text-align:center;position:relative;z-index:5}
+.counter-overline{
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8f9791;margin-bottom:16px
+}
+.counter-number{
+  font-size:clamp(82px,13vw,190px);
+  line-height:.86;font-weight:800;letter-spacing:-.07em;color:#fff
+}
+.counter-number span{color:var(--green)}
+.counter-sub{
+  margin-top:12px;font-size:16px;color:#cfd4d0;letter-spacing:.02em
+}
+.counter-progress-wrap{width:min(720px,90%);margin:34px auto 0}
+.counter-progress{
+  height:18px;border-radius:999px;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);overflow:hidden;position:relative
+}
+.counter-progress-fill{
+  width:var(--fill,0%);height:100%;
+  background:linear-gradient(90deg,#49c857,#43b64d 45%,#358d3d 100%);
+  border-radius:999px;position:relative;transition:width .08s linear
+}
+.counter-progress-fill:after{
+  content:"";position:absolute;right:-30px;top:0;height:100%;width:54px;
+  background:linear-gradient(90deg,rgba(255,255,255,.22),rgba(255,255,255,.05) 44%,rgba(0,0,0,.07));
+  border-radius:999px
+}
+.counter-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  width:min(900px,96%);margin:34px auto 0
+}
+.phase{
+  padding:18px 18px 17px;border-radius:20px;border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);text-align:left;transition:.18s ease
+}
+.phase small{
+  display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8b928d;margin-bottom:8px
+}
+.phase strong{display:block;font-size:18px;letter-spacing:-.03em}
+.phase span{display:block;margin-top:6px;font-size:12px;color:#9ea49f;line-height:1.55}
+.phase.active{
+  border-color:rgba(67,182,77,.45);
+  background:linear-gradient(160deg,rgba(67,182,77,.10),rgba(255,255,255,.02));
+  box-shadow:0 0 0 1px rgba(67,182,77,.10) inset
+}
