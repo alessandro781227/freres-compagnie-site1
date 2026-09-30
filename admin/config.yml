@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: alessandro781227/freres-compagnie-site1
+  branch: main
+
+site_url: https://papaya-dragon-81dc5c.netlify.app
+display_url: https://papaya-dragon-81dc5c.netlify.app
+logo_url: /assets/logo.png
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "photos"
+    label: "Photos du site"
+    files:
+      - name: "realisations"
+        label: "Photos des réalisations"
+        file: "data/site.json"
+        format: "json"
+        fields:
+          - label: "Photo façade"
+            name: "facade"
+            widget: "image"
+            required: false
+          - label: "Photo intérieur"
+            name: "interieur"
+            widget: "image"
+            required: false
+          - label: "Photo finitions"
+            name: "finitions"
+            widget: "image"
+            required: false
