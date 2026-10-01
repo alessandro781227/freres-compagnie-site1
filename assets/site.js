@@ -81,3 +81,19 @@ function updateFX(){
 addEventListener('scroll',updateFX,{passive:true});
 addEventListener('resize',updateFX);
 updateFX();
+
+document.querySelectorAll('.work-slider').forEach(slider=>{
+  const track=slider.querySelector('.work-track');
+  const slides=[...slider.querySelectorAll('.work-slide')];
+  const prev=slider.querySelector('.work-prev');
+  const next=slider.querySelector('.work-next');
+  const count=slider.querySelector('.work-count span');
+  const dots=slider.querySelector('.work-dots');
+  slides.forEach((_,i)=>{const d=document.createElement('span');d.className='work-dot'+(i===0?' active':'');dots.appendChild(d)});
+  const dotEls=[...dots.children];
+  const current=()=>Math.round(track.scrollLeft/Math.max(1,track.clientWidth));
+  const go=i=>track.scrollTo({left:Math.max(0,Math.min(slides.length-1,i))*track.clientWidth,behavior:'smooth'});
+  prev.addEventListener('click',()=>go(current()-1));
+  next.addEventListener('click',()=>go(current()+1));
+  track.addEventListener('scroll',()=>requestAnimationFrame(()=>{const i=Math.max(0,Math.min(slides.length-1,current()));count.textContent=String(i+1);dotEls.forEach((d,n)=>d.classList.toggle('active',n===i))}),{passive:true});
+});
