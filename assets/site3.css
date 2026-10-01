@@ -74,3 +74,28 @@ section.content{width:min(1280px,90vw);margin:auto;padding:118px 0}
   content:"";position:absolute;left:-30px;bottom:-120px;width:330px;height:330px;border-radius:50%;
   border:40px solid rgba(67,182,77,.12)
 }
+
+/* sliders */
+.work-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.work-project{border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#101310}
+.work-slider{position:relative;overflow:hidden;background:#151915}
+.work-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.work-track::-webkit-scrollbar{display:none}
+.work-slide{position:relative;flex:0 0 100%;height:330px;scroll-snap-align:start;overflow:hidden;background:linear-gradient(135deg,#252b26,#111411 70%)}
+.work-empty{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:7px;color:#69716b}
+.work-empty:before{content:"";position:absolute;inset:20px;border:1px dashed rgba(255,255,255,.10);border-radius:18px}
+.work-empty span{font-size:11px;letter-spacing:.18em;color:var(--green)}
+.work-empty strong{font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:#8d958f}
+.work-stage{position:absolute;left:14px;bottom:14px;z-index:3;padding:8px 11px;border-radius:999px;background:rgba(6,8,7,.72);font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.work-arrow{position:absolute;top:50%;z-index:5;width:39px;height:39px;margin-top:-20px;border:1px solid rgba(255,255,255,.15);border-radius:50%;background:rgba(7,9,8,.62);color:#fff;font-size:27px;line-height:1;cursor:pointer}
+.work-prev{left:12px}.work-next{right:12px}
+.work-count{position:absolute;right:14px;bottom:14px;z-index:5;padding:7px 10px;border-radius:999px;background:rgba(6,8,7,.72);font-size:10px;font-weight:800}
+.work-dots{position:absolute;left:50%;bottom:18px;z-index:5;transform:translateX(-50%);display:flex;gap:6px}
+.work-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.30)}
+.work-dot.active{background:var(--green)}
+.work-info{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:20px 21px 23px}
+.work-num{color:var(--green);font-size:11px;font-weight:800;padding-top:5px}
+.work-info h3{font-size:20px}
+.work-info p{margin:7px 0 0;color:var(--muted);font-size:12px;line-height:1.65}
+@media(max-width:980px){.work-list{grid-template-columns:1fr}}
+@media(max-width:620px){.work-slide{height:300px}.work-info{grid-template-columns:34px 1fr}}
