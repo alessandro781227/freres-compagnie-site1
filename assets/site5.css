@@ -1,5 +1,28 @@
-
 @media(prefers-reduced-motion:reduce){
   *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
   .reveal-up,.reveal-left,.reveal-right,.reveal-scale{opacity:1;transform:none}
+}
+
+/* Logo sur fond sombre : fond transparent, noir converti en blanc dans l'image */
+.logo-plaque{
+  background:transparent!important;
+  border-radius:0!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+.logo-plaque img{
+  width:148px!important;
+  height:auto!important;
+}
+.footer-logo{
+  background:transparent!important;
+  border-radius:0!important;
+  padding:0!important;
+  height:54px!important;
+  width:auto!important;
+}
+@media(max-width:620px){
+  .logo-plaque{padding:0!important}
+  .logo-plaque img{width:124px!important}
+  .footer-logo{height:50px!important}
 }
