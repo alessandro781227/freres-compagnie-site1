@@ -5,7 +5,7 @@ backend:
 site_url: https://compagniefreres.com
 display_url: https://compagniefreres.com
 
-logo_url: /assets/logo.png
+logo_url: /assets/logo-white-green.png
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"

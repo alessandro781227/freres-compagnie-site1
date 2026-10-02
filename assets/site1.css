@@ -40,10 +40,10 @@ img{max-width:100%;display:block}
   box-shadow:0 12px 44px rgba(0,0,0,.25)
 }
 .logo-plaque{
-  display:flex;align-items:center;height:49px;padding:4px 9px;
-  background:#fff;border-radius:11px;overflow:hidden
+  display:flex;align-items:center;height:49px;padding:0 2px;
+  background:transparent;border-radius:0;overflow:visible
 }
-.logo-plaque img{width:126px;height:auto}
+.logo-plaque img{width:154px;height:auto}
 nav{display:flex;align-items:center;gap:24px;color:#cbd0cc;font-size:13px}
 nav a{transition:.2s}
 nav a:hover{color:#fff}

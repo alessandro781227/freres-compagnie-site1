@@ -99,3 +99,5 @@ section.content{width:min(1280px,90vw);margin:auto;padding:118px 0}
 .work-info p{margin:7px 0 0;color:var(--muted);font-size:12px;line-height:1.65}
 @media(max-width:980px){.work-list{grid-template-columns:1fr}}
 @media(max-width:620px){.work-slide{height:300px}.work-info{grid-template-columns:34px 1fr}}
+
+.work-photo{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
