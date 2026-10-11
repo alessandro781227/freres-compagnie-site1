@@ -97,3 +97,18 @@ document.querySelectorAll('.work-slider').forEach(slider=>{
   next.addEventListener('click',()=>go(current()+1));
   track.addEventListener('scroll',()=>requestAnimationFrame(()=>{const i=Math.max(0,Math.min(slides.length-1,current()));count.textContent=String(i+1);dotEls.forEach((d,n)=>d.classList.toggle('active',n===i))}),{passive:true});
 });
+
+
+// Compact, accessible service cards on mobile; desktop layout unchanged.
+document.querySelectorAll('#services .service-toggle').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const card=button.closest('.card');
+    const willOpen=!card.classList.contains('is-open');
+    document.querySelectorAll('#services .card.is-open').forEach(openCard=>{
+      openCard.classList.remove('is-open');
+      openCard.querySelector('.service-toggle').setAttribute('aria-expanded','false');
+    });
+    if(willOpen)card.classList.add('is-open');
+    button.setAttribute('aria-expanded',String(willOpen));
+  });
+});
