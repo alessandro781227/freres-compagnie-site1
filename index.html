@@ -32,11 +32,13 @@
   <a href="#top" class="logo-plaque" aria-label="FRERES compagnie — Accueil">
     <img src="/assets/logo-white-green.png" alt="FRERES compagnie">
   </a>
-  <nav>
+  <button class="mobile-nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  <nav id="main-navigation" aria-label="Navigation principale">
+    <a href="#top">Accueil</a>
     <a href="#services">Services</a>
     <a href="#realisations">Réalisations</a>
     <a href="/references.html">Références</a>
-    <a href="#methode">Notre méthode</a>
+
     <a href="#contact" class="nav-cta">Demander un devis</a>
   </nav>
 </header>
@@ -47,14 +49,14 @@
   <div class="hero-wrap">
     <div class="hero-copy reveal-left">
       <div class="kicker">Particuliers &amp; professionnels · Région de Charleroi</div>
-      <h1>Un savoir-faire<br>qui se révèle <em>dans la finition.</em></h1>
+      <h1>Des projets ambitieux.<br>Des finitions qui font <em>la différence.</em></h1>
       <p class="lead">
         De votre habitation à vos espaces professionnels, FRERES &amp; cie réalise vos travaux de peinture,
         cloisons, sols et rénovation avec la même exigence : une préparation rigoureuse et des finitions soignées.
       </p>
       <div class="actions">
-        <a class="btn btn-primary" href="#contact">Parlons de votre projet</a>
-        <a class="btn btn-secondary" href="/references.html">Nos références</a>
+        <a class="btn btn-primary" href="#realisations">Découvrir nos réalisations</a>
+        <a class="btn btn-secondary" href="#contact">Demander un devis</a>
       </div>
       <div class="hero-mini">
         <div class="pill">Peinture</div><div class="pill">Gyproc</div><div class="pill">Façades</div><div class="pill">Parquet</div><div class="pill">Finitions</div>
@@ -106,23 +108,7 @@
   <div class="identity-caption">Une identité reconnaissable — une exécution soignée</div>
 </div>
 
-<section class="counter-journey" id="counterJourney">
-  <div class="sticky"><div class="counter-world">
-    <div class="counter-panel"></div><div class="counter-glow"></div>
-    <div class="counter-label">Compteur de m² — travaux en cours</div>
-    <div class="counter-core" id="counterCore"><div class="counter-block">
-      <div class="counter-overline">Surface en cours de traitement</div>
-      <div class="counter-number"><span id="m2Count">0</span> m²</div>
-      <div class="counter-sub" id="phaseText">Préparation des supports</div>
-      <div class="counter-progress-wrap"><div class="counter-progress"><div class="counter-progress-fill" id="counterFill"></div></div></div>
-      <div class="counter-grid">
-        <div class="phase active" id="phase1"><small>Phase 01</small><strong>Préparation</strong><span>Protection, réparations, enduits et mise en état des supports.</span></div>
-        <div class="phase" id="phase2"><small>Phase 02</small><strong>Application</strong><span>Mise en œuvre régulière, progression surface après surface.</span></div>
-        <div class="phase" id="phase3"><small>Phase 03</small><strong>Finition</strong><span>Derniers détails, contrôle visuel et rendu propre jusque dans les coins.</span></div>
-      </div>
-    </div></div>
-  </div></div>
-</section>
+
 
 <section id="services" class="content">
   <div class="section-head reveal-up"><div><div class="kicker">Nos services</div><h2>Des prestations pensées<br>pour valoriser vos espaces.</h2><div class="section-line"></div></div><p>Qu’il s’agisse d’une intervention ciblée ou d’une rénovation plus globale, chaque chantier est préparé avec soin afin d’assurer un résultat cohérent et durable.</p></div>
