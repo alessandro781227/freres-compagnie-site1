@@ -85,6 +85,15 @@ if(progress){
  function updateProgress(){const m=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(m>0?window.scrollY/m*100:0)+'%'}
  addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
 }
+const menuBtn=document.querySelector('.mobile-nav-toggle');
+const nav=document.getElementById('main-navigation');
+if(menuBtn&&nav){
+ const setOpen=(yes)=>{menuBtn.setAttribute('aria-expanded',String(yes));menuBtn.setAttribute('aria-label',yes?'Fermer le menu':'Ouvrir le menu');nav.classList.toggle('is-open',yes)};
+ menuBtn.addEventListener('click',()=>setOpen(menuBtn.getAttribute('aria-expanded')!=='true'));
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+ document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menuBtn.contains(e.target))setOpen(false)});
+}
 </script>
 </body>
 </html>
