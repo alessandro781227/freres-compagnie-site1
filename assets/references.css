@@ -153,3 +153,12 @@
   .trust-item-larcier img{height:68px;max-width:90%}
   .trust-item small{font-size:10px;line-height:1.35}
 }
+
+/* Photographies authentiques du premier chantier IFAPME. */
+.ifapme-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
+.ifapme-gallery a{display:block;overflow:hidden;border-radius:10px;background:#e6ece8;outline-offset:2px}
+.ifapme-gallery img{display:block;width:100%;height:150px;object-fit:cover;object-position:50% 45%;transition:transform .25s ease}
+.ifapme-gallery a:hover img{transform:scale(1.035)}
+.ifapme-gallery a:focus-visible{outline:3px solid #2d9346}
+@media(max-width:620px){.ifapme-gallery img{height:132px}}
+@media(prefers-reduced-motion:reduce){.ifapme-gallery img{transition:none}.ifapme-gallery a:hover img{transform:none}}
