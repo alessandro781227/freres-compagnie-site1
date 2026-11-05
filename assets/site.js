@@ -1,6 +1,6 @@
 const faces = document.getElementById('faces');
 if (faces) {
-  faces.innerHTML = '<img src="/assets/portrait-pattern.png" alt="">'.repeat(56);
+  faces.innerHTML = '<img src="/assets/portrait-pattern.png" alt="">'.repeat(24);
 }
 
 const animated=document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-scale');
@@ -41,46 +41,33 @@ fetch('/data/site.json', {cache:'no-store'})
   })
   .catch(() => {});
 
-const progress=document.getElementById('scrollProgress');
-const counterJourney=document.getElementById('counterJourney');
-const counterFill=document.getElementById('counterFill');
-const m2Count=document.getElementById('m2Count');
-const phaseText=document.getElementById('phaseText');
-const phases=[document.getElementById('phase1'),document.getElementById('phase2'),document.getElementById('phase3')];
-
-const clamp=(n,min,max)=>Math.min(max,Math.max(min,n));
-
-function setActivePhase(index){
-  phases.forEach((el,i)=>el.classList.toggle('active',i===index));
+const progress = document.getElementById('scrollProgress');
+if (progress) {
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  };
+  addEventListener('scroll', updateProgress, { passive: true });
+  addEventListener('resize', updateProgress);
+  updateProgress();
 }
 
-function updateFX(){
-  const max=document.documentElement.scrollHeight-innerHeight;
-  progress.style.width=(max>0?(scrollY/max)*100:0)+'%';
-
-  const jr=counterJourney.getBoundingClientRect();
-  const total=jr.height-innerHeight;
-  const p=total>0?clamp((-jr.top)/total,0,1):0;
-
-  const value=Math.round(p*5320);
-  m2Count.textContent=value;
-  counterFill.style.setProperty('--fill',(p*100)+'%');
-
-  if(p<0.34){
-    setActivePhase(0);
-    phaseText.textContent='Préparation des supports';
-  } else if(p<0.68){
-    setActivePhase(1);
-    phaseText.textContent='Application en cours';
-  } else {
-    setActivePhase(2);
-    phaseText.textContent='Finition et contrôle';
-  }
+// Navigation claire et accessible sur mobile.
+const menuButton = document.querySelector('.mobile-nav-toggle');
+const mainNavigation = document.getElementById('main-navigation');
+if (menuButton && mainNavigation) {
+  const setMenu = (open) => {
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    mainNavigation.classList.toggle('is-open', open);
+  };
+  menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+  mainNavigation.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('click', e => {
+    if (!mainNavigation.contains(e.target) && !menuButton.contains(e.target)) setMenu(false);
+  });
 }
-
-addEventListener('scroll',updateFX,{passive:true});
-addEventListener('resize',updateFX);
-updateFX();
 
 document.querySelectorAll('.work-slider').forEach(slider=>{
   const track=slider.querySelector('.work-track');
