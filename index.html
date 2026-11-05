@@ -186,9 +186,22 @@
   <div class="contact-copy reveal-left"><div class="kicker">Contact</div><h2>Présentez-nous<br>votre projet.</h2><div class="section-line"></div><p>Indiquez-nous la nature des travaux et, si possible, le délai souhaité. Nous pourrons ensuite convenir d’un échange ou d’une visite.</p></div>
   <form class="reveal-right" name="demande-devis" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="demande-devis"><p class="hp-field" aria-hidden="true"><label>Ne pas remplir ce champ : <input name="bot-field"></label></p>
+    <span class="fieldset-label" id="client-type-label">Votre profil</span>
+    <div class="client-choice" role="group" aria-labelledby="client-type-label">
+      <label><input type="radio" name="profil-client" value="Particulier" checked> Particulier</label>
+      <label><input type="radio" name="profil-client" value="Professionnel"> Professionnel</label>
+    </div>
     <div class="row"><label>Nom<input name="nom" required autocomplete="name" placeholder="Votre nom"></label><label>Téléphone<input name="telephone" autocomplete="tel" inputmode="tel" placeholder="04xx xx xx xx"></label></div>
     <label>Adresse e-mail<input name="email" required type="email" autocomplete="email" placeholder="nom@email.be"></label>
-    <label>Type de travaux<select name="type-travaux"><option>Peinture & finitions</option><option>Gyproc / cloisons</option><option>Façade / extérieur</option><option>Parquet / sol</option><option>Enduisage / réparation</option></select></label>
+    <div class="row">
+      <label>Code postal du chantier<input name="code-postal" inputmode="numeric" autocomplete="postal-code" placeholder="Ex. 6000"></label>
+      <label>Quand prévoyez-vous les travaux ?
+        <select name="delai"><option value="">À définir</option><option>Dans les 3 mois</option><option>Dans 3 à 6 mois</option><option>Plus tard</option></select>
+      </label>
+    </div>
+    <label>Type de travaux<select name="type-travaux"><option>Peinture & finitions</option><option>Gyproc / cloisons</option><option>Façade / extérieur</option><option>Parquet / sol</option><option>Enduisage / réparation</option><option>Aménagement de locaux professionnels</option><option>Rénovation complète</option></select></label>
+    <label>Budget approximatif (facultatif)<select name="budget"><option value="">Je préfère en discuter</option><option>Moins de 5 000 €</option><option>5 000 à 15 000 €</option><option>15 000 à 30 000 €</option><option>30 000 à 60 000 €</option><option>Plus de 60 000 €</option></select></label>
+    <p class="field-hint">Ces informations nous aident à comprendre votre demande. Le budget indiqué ne constitue pas un devis.</p>
     <label>Description du projet<textarea name="message" required rows="5" placeholder="Décrivez brièvement votre projet..."></textarea></label>
     <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
     <p class="note">Les informations envoyées servent uniquement à traiter votre demande. <a class="legal-inline-link" href="/confidentialite.html">Politique de confidentialité</a>.</p>
