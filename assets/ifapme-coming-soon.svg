@@ -25,9 +25,9 @@
 </g>
 <path d="M965 0 L1305 0 L1045 800 L705 800Z" fill="#80ec8b" opacity=".035"/>
 <rect width="1180" height="800" fill="url(#shade)"/>
-<path d="M88 90H240" stroke="url(#lime)" stroke-width="8"/>
-<path d="M88 90V131" stroke="#8fea9b" stroke-width="8"/>
-<text x="88" y="196" fill="#c0f7c7" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="27" letter-spacing="8">FRERES &amp; CIE</text>
+
+
+<text x="88" y="196" fill="#c0f7c7" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="27" letter-spacing="8">FRERES &amp; cie</text>
 <text x="88" y="249" fill="#9ab5a1" font-family="Arial, Helvetica, sans-serif" font-size="19" letter-spacing="5">NOUVEAU CHANTIER  ·  IFAPME</text>
 <path d="M88 284H680" stroke="#84dc95" stroke-opacity=".4" stroke-width="2"/>
 <text x="80" y="414" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="116" letter-spacing="-4">COMING</text>
