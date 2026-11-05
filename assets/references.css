@@ -48,7 +48,7 @@
 .reference-heading h2{font-size:clamp(38px,5vw,66px);line-height:1.02;margin:10px 0 0}
 .reference-heading p{font-size:14px;color:#536557;line-height:1.6;max-width:380px}
 .reference-showcase{border-radius:25px;background:#102018;color:white;overflow:hidden;display:grid;grid-template-columns:1fr 1.02fr;min-height:420px;box-shadow:0 22px 44px rgba(8,33,17,.13)}
-.reference-showcase .showcase-img{min-height:370px;background:linear-gradient(0deg,rgba(2,15,8,.70),rgba(2,15,8,.0) 65%),url('/assets/realisations/gyproc-2-isolation-structure.webp') center/cover;display:flex;align-items:end;padding:22px}
+.reference-showcase .showcase-img{min-height:370px;background:linear-gradient(0deg,rgba(2,15,8,.70),rgba(2,15,8,.0) 65%),url('/assets/ifapme-coming-soon.svg') left center/cover no-repeat;display:block;padding:0}
 .reference-showcase .showcase-img p{font-size:11px;color:#e6f0e6;background:rgba(0,0,0,.52);padding:11px 12px;border-radius:10px;max-width:330px;line-height:1.5}
 .reference-showcase .showcase-content{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:start}
 .reference-showcase .status-tag{display:inline-block;font-size:11px;font-weight:800;color:#8bea9c;text-transform:uppercase;letter-spacing:.12em}
@@ -99,3 +99,6 @@
   .ref-page-content{padding:54px 18px}
 }
 @media(prefers-reduced-motion:reduce){.audience-card:hover{transform:none}}
+
+/* Illustration dédiée IFAPME : projet à venir, aucune photo de chantier fictive. */
+.reference-showcase .showcase-img{background-image:url('/assets/ifapme-coming-soon.svg');background-color:#081b0f;background-position:left center;background-size:cover}
