@@ -139,3 +139,17 @@
   .pro-spotlight-copy{padding:24px 21px}
   .pro-spotlight-copy h2{font-size:30px}
 }
+
+/* Les marques sont des images officielles monochromes, jamais des mots recréés. */
+.trust-item img{display:block;width:100%;height:74px;max-width:190px;object-fit:contain;object-position:center;filter:grayscale(1) brightness(0);mix-blend-mode:multiply}
+.trust-item small{display:block;max-width:190px;margin:0 auto;color:#5f7063;font-size:11px;line-height:1.55}
+.trust-item-larcier img{max-height:84px;max-width:142px}
+.trust-item-ifapme img{max-height:65px}
+.trust-item-agc img{max-height:66px}
+@media(max-width:620px){
+  .trust-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .trust-item{padding:10px 6px;border-top:0;border-left:1px solid #d4ded6;text-align:center}
+  .trust-item img{height:56px;max-width:98%}
+  .trust-item-larcier img{height:68px;max-width:90%}
+  .trust-item small{font-size:10px;line-height:1.35}
+}
