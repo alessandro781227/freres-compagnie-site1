@@ -141,7 +141,7 @@
 }
 
 /* Les marques sont des images officielles monochromes, jamais des mots recréés. */
-.trust-item img{display:block;width:100%;height:74px;max-width:190px;object-fit:contain;object-position:center;filter:grayscale(1) brightness(0);mix-blend-mode:multiply}
+.trust-item img{display:block;width:100%;height:74px;max-width:190px;object-fit:contain;object-position:center;filter:grayscale(1) contrast(5);mix-blend-mode:multiply}
 .trust-item small{display:block;max-width:190px;margin:0 auto;color:#5f7063;font-size:11px;line-height:1.55}
 .trust-item-larcier img{max-height:84px;max-width:142px}
 .trust-item-ifapme img{max-height:65px}
