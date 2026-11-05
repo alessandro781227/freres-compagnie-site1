@@ -1,24 +1,6 @@
 
 /* FRERES & cie — vitrine références : extension isolée du design 2026. */
 :root{--ref-green:#3bad50;--ref-forest:#102018;--ref-cream:#f2f4f0;}
-.site-header{background:rgba(8,16,11,.91);backdrop-filter:blur(17px);border:1px solid rgba(255,255,255,.11)}
-.site-header nav{gap:18px}
-.site-header nav .nav-cta{background:#288e3b;color:white}
-.site-header nav .nav-cta:hover{background:#48b65a;color:white}
-.hero{
- min-height:710px;min-height:min(790px,100svh);padding:150px max(18px,5vw) 92px;
- background:linear-gradient(90deg,rgba(7,17,11,.98) 0%,rgba(7,17,11,.93) 38%,rgba(7,17,11,.67) 65%,rgba(7,17,11,.28) 100%),url('/assets/realisations/gyproc-3-habillage.webp') center /cover no-repeat;
-}
-.hero:before,.hero:after{display:none}
-.hero .hero-copy{max-width:830px}
-.hero h1{line-height:.99;font-size:clamp(52px,6.4vw,96px)}
-.hero h1 em{color:#82dd90}
-.hero .lead{max-width:640px;color:#e2e9e3;font-size:clamp(15px,1.4vw,18px);line-height:1.67}
-.hero .kicker{color:#89e098}
-.hero .btn-primary{background:#2d9843;color:#fff}
-.hero .btn-secondary{border-color:rgba(255,255,255,.46);background:rgba(7,17,11,.35)}
-.hero-mini{margin-top:38px}
-.hero-mini .pill{background:rgba(5,16,10,.43);border:1px solid rgba(255,255,255,.17);color:#e0eee2}
 .trust-band{padding:45px max(17px,5vw);background:var(--ref-cream);color:#18291e;border-bottom:1px solid #d8e0d9}
 .trust-inner{width:min(1280px,100%);margin:auto;display:grid;grid-template-columns:1.1fr 1.8fr;align-items:center;gap:26px}
 .trust-intro{border-left:3px solid #359b4b;padding-left:19px}
@@ -28,7 +10,8 @@
 .trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
 .trust-item{border-left:1px solid #d4ded6;padding:18px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:8px}
 .trust-item strong{font-size:clamp(20px,2.4vw,31px);letter-spacing:-.03em}
-.trust-item span{color:#5e6f61;font-size:11px;line-height:1.45}
+.trust-item span{color:#1b3021;font-size:clamp(21px,2.3vw,30px);font-weight:800;line-height:1.25;letter-spacing:-.03em}
+.trust-item small{color:#627467;font-size:11px;line-height:1.55}
 .audience-section{padding:100px max(17px,5vw);background:#0c120e}
 .audience-wrap,.reference-wrap{width:min(1280px,100%);margin:auto}
 .audience-section .section-eyebrow,.reference-section .section-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#78d48b;font-weight:850}
@@ -48,7 +31,7 @@
 .reference-heading h2{font-size:clamp(38px,5vw,66px);line-height:1.02;margin:10px 0 0}
 .reference-heading p{font-size:14px;color:#536557;line-height:1.6;max-width:380px}
 .reference-showcase{border-radius:25px;background:#102018;color:white;overflow:hidden;display:grid;grid-template-columns:1fr 1.02fr;min-height:420px;box-shadow:0 22px 44px rgba(8,33,17,.13)}
-.reference-showcase .showcase-img{min-height:370px;background:linear-gradient(0deg,rgba(2,15,8,.70),rgba(2,15,8,.0) 65%),url('/assets/ifapme-coming-soon.svg') left center/cover no-repeat;display:block;padding:0}
+
 .reference-showcase .showcase-img p{font-size:11px;color:#e6f0e6;background:rgba(0,0,0,.52);padding:11px 12px;border-radius:10px;max-width:330px;line-height:1.5}
 .reference-showcase .showcase-content{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:start}
 .reference-showcase .status-tag{display:inline-block;font-size:11px;font-weight:800;color:#8bea9c;text-transform:uppercase;letter-spacing:.12em}
@@ -84,9 +67,6 @@
 .ref-notice{font-size:12px;color:#a4b5a7;line-height:1.6;max-width:850px;margin:24px 0}
 @media(max-width:980px){.trust-inner{grid-template-columns:1fr}.reference-showcase{grid-template-columns:1fr}.reference-showcase .showcase-img{min-height:300px}.audience-card{min-height:310px}}
 @media(max-width:700px){
-  .hero{min-height:690px;padding:145px 18px 72px;background-position:62% center}
-  .hero h1{font-size:clamp(43px,11vw,65px)}
-  .hero .lead{line-height:1.55}
   .trust-band{padding:34px 18px}.trust-grid{gap:0}.trust-item{padding:14px 8px}.trust-item strong{font-size:19px}.trust-item span{font-size:10px}
   .audience-section,.reference-section{padding:68px 17px}
   .audience-cards,.reference-small{grid-template-columns:1fr}
@@ -101,7 +81,8 @@
 @media(prefers-reduced-motion:reduce){.audience-card:hover{transform:none}}
 
 /* Illustration dédiée IFAPME : projet à venir, aucune photo de chantier fictive. */
-.reference-showcase .showcase-img{background-image:url('/assets/ifapme-coming-soon.svg');background-color:#081b0f;background-position:left center;background-size:cover}
+.reference-showcase .showcase-img{background:#081b0f;display:flex;align-items:center;justify-content:center;padding:0;min-height:0}
+.reference-showcase .showcase-img img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;aspect-ratio:3/2}
 
 /* Navigation simple et esthétique — visibilité ordinateur et téléphone */
 .mobile-nav-toggle{display:none}
@@ -125,38 +106,36 @@
   .site-header nav a:hover,.site-header nav a:focus-visible{background:rgba(255,255,255,.07)}
   .site-header nav .nav-cta{display:block;margin-top:4px;padding:14px 15px;text-align:center;background:#24973c;color:#fff}
 }
-/* Section contact claire, inspirée de la maquette validée. */
-section#contact.content{width:100%;max-width:none;padding:86px max(20px,calc((100vw - 1280px)/2));background:#eff3ef;color:#11291a;gap:clamp(20px,5vw,70px);scroll-margin-top:90px}
-#contact .contact-copy h2{color:#122919}
-#contact .contact-copy p{color:#526655}
-#contact .contact-copy .kicker{color:#267d3b}
-#contact .section-line{background:linear-gradient(90deg,#2caa4e,rgba(44,170,78,.06))}
-#contact form{padding:clamp(18px,3vw,30px);background:#fff;border:1px solid #d6e4d9;box-shadow:0 18px 48px rgba(10,48,20,.07)}
-#contact form label,#contact .fieldset-label{color:#344d3a;font-weight:650}
-#contact input,#contact textarea,#contact select{background:#f8faf8;color:#182b1d;border:1px solid #d3dfd5;min-height:48px}
-#contact input:focus,#contact select:focus,#contact textarea:focus{border-color:#329b4d;box-shadow:0 0 0 3px rgba(50,155,77,.11)}
-#contact .client-choice label{border:1px solid #d3dfd5;background:#f8faf8;color:#28452d}
-#contact .client-choice label:has(input:checked){background:#e5f5e8;border-color:#3aa353}
-#contact .field-hint,#contact .note{color:#627569}
-#contact .legal-inline-link{color:#1c7737}
-#contact form button{background:#288f42;color:#fff}
-#contact form button:hover{background:#207b37}
-#contact .row{gap:13px}
-section#contact.content{scroll-margin-top:110px}
-#services,#realisations,#references,#clienteles,#methode{scroll-margin-top:105px}
+#services,#realisations,#references,#methode{scroll-margin-top:105px}
 /* Les images conservées restent des photos de réalisations. */
 .work-photo{object-fit:cover}
 .audience-card{background-color:#102016}
 .reference-tile a:hover,.ref-footer-call a:hover{text-decoration:underline}
-@media(max-width:980px){section#contact.content{grid-template-columns:1fr;padding:70px 20px}}
 @media(max-width:620px){
-  .hero{min-height:670px;padding-top:142px}
-  .hero .hero-mini{margin-top:27px}
   .trust-grid{grid-template-columns:1fr;gap:0}
   .trust-item{padding:13px 10px;text-align:left;border-left:0;border-top:1px solid #d4ded6}
   .trust-item strong{font-size:22px}
-  .trust-item span{font-size:11px}
-  section#contact.content{padding:62px 17px}
+  .trust-item span{font-size:22px}
   #contact .client-choice{display:grid;grid-template-columns:1fr 1fr}
-  #contact form{padding:18px}
+}
+
+/* Présentation professionnelle discrète, cohérente avec le site original. */
+.pro-spotlight{width:min(1280px,90vw);margin:74px auto 0;scroll-margin-top:110px}
+.pro-spotlight-inner{display:grid;grid-template-columns:.88fr 1.12fr;align-items:center;gap:0;overflow:hidden;border:1px solid rgba(255,255,255,.10);border-radius:24px;background:linear-gradient(140deg,#111b13,#172218)}
+.pro-spotlight-copy{padding:clamp(24px,3.5vw,48px);display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.pro-spotlight-copy .kicker{margin-bottom:14px}
+.pro-spotlight-copy h2{font-size:clamp(30px,3.2vw,45px);line-height:1.06;letter-spacing:-.04em}
+.pro-spotlight-copy p{color:#b7c7b9;font-size:14px;line-height:1.68;margin:19px 0 24px}
+.pro-spotlight-copy .btn{min-height:48px}
+.pro-spotlight-feature{display:block;background:#0c1a10;overflow:hidden;align-self:stretch;display:flex;align-items:center}
+.pro-spotlight-feature img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:contain}
+.pro-spotlight-feature:focus-visible{outline:3px solid #9bf3aa;outline-offset:-4px}
+@media(max-width:840px){
+  .pro-spotlight-inner{grid-template-columns:1fr}
+  .pro-spotlight-feature{order:-1}
+}
+@media(max-width:620px){
+  .pro-spotlight{width:calc(100% - 34px);margin-top:48px}
+  .pro-spotlight-copy{padding:24px 21px}
+  .pro-spotlight-copy h2{font-size:30px}
 }
