@@ -175,3 +175,62 @@
 .ifapme-gallery a:last-child:nth-child(odd){grid-column:1/-1}
 .ifapme-gallery a:last-child:nth-child(odd) img{height:180px;object-fit:cover}
 @media(max-width:620px){.ifapme-gallery a:last-child:nth-child(odd) img{height:145px}}
+
+/* 2026-11 : bande de références compacte, à la place des anciennes grandes lignes. */
+.trust-band.trust-band-compact{padding:18px max(20px,5vw);background:#fff;border-bottom:1px solid #e5ece6}
+.trust-compact-inner{width:min(1140px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:35px}
+.trust-compact-label{flex:0 0 auto;margin:0;color:#2f7f3f;font-weight:850;font-size:11px;line-height:1.4;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
+.trust-compact-logos{display:flex;align-items:center;justify-content:space-around;flex:1;gap:30px;min-width:0}
+.trust-compact-logos a{display:flex;align-items:center;justify-content:center;min-width:0;flex:1;min-height:62px;padding:3px 6px;border-radius:8px;transition:background .18s ease}
+.trust-compact-logos a:hover,.trust-compact-logos a:focus-visible{background:#f4f7f4}
+.trust-compact-logos a:focus-visible{outline:2px solid #3cad55;outline-offset:3px}
+.trust-compact-logos img{display:block;width:auto;max-width:100%;height:52px;max-height:52px;object-fit:contain;filter:grayscale(1) contrast(1.6);mix-blend-mode:multiply}
+.trust-compact-logos .trust-compact-ifapme{height:58px;max-height:58px}
+.trust-compact-logos .trust-compact-agc{height:36px;max-height:36px}
+.trust-compact-logos .trust-compact-larcier{height:45px;max-height:45px}
+@media(max-width:750px){
+  .trust-band.trust-band-compact{padding:16px 16px 18px}
+  .trust-compact-inner{display:block}
+  .trust-compact-label{text-align:center;font-size:10px;margin:0 0 11px}
+  .trust-compact-logos{gap:6px;justify-content:space-between}
+  .trust-compact-logos a{padding:2px;min-height:56px}
+  .trust-compact-logos img{max-width:100%;height:46px;max-height:46px}
+  .trust-compact-logos .trust-compact-ifapme{height:52px;max-height:52px}
+  .trust-compact-logos .trust-compact-agc{height:31px;max-height:31px}
+  .trust-compact-logos .trust-compact-larcier{height:37px;max-height:37px}
+}
+/* Réalisation Larcier, vraie photographie, pleine résolution accessible au clic. */
+.larcier-feature{margin:0 0 68px;scroll-margin-top:115px}
+.larcier-feature-inner{display:grid;grid-template-columns:1.02fr .8fr;align-items:stretch;overflow:hidden;border:1px solid rgba(255,255,255,.13);border-radius:23px;background:linear-gradient(125deg,#1b3022,#101d15)}
+.larcier-feature-copy{padding:clamp(26px,4.2vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.larcier-eyebrow{font-size:10px;font-weight:850;letter-spacing:.17em;color:#89d99a;text-transform:uppercase}
+.larcier-feature-copy h3{font-size:clamp(33px,4.1vw,58px);line-height:1.05;letter-spacing:-.045em;margin:19px 0}
+.larcier-feature-copy h3 em{font-style:normal;color:#9fe4a9}
+.larcier-feature-copy p{font-size:15px;line-height:1.75;color:#d3dfd5;max-width:510px;margin:0}
+.larcier-feature-caption{font-size:11px;letter-spacing:.02em;color:#9eb1a3;margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.17)}
+.larcier-cover{display:block;align-self:center;width:100%;line-height:0;background:#0e1c13;overflow:hidden}
+.larcier-cover img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain}
+.larcier-cover:focus-visible,.larcier-gallery a:focus-visible{outline:3px solid #9fe4a9;outline-offset:3px}
+.larcier-gallery-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:30px 0 14px}
+.larcier-gallery-heading h4{font-size:clamp(18px,2vw,25px);letter-spacing:-.03em;margin:0}
+.larcier-gallery-heading p{font-size:12px;color:#b6c9b8;line-height:1.5;margin:0}
+.larcier-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.larcier-gallery a{display:block;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:#19291f;transition:transform .18s ease}
+.larcier-gallery a:hover{transform:translateY(-2px)}
+.larcier-gallery img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+@media(max-width:850px){
+  .larcier-feature-inner{grid-template-columns:1fr}
+  .larcier-cover{order:-1;max-height:none}
+  .larcier-cover img{width:100%;height:auto;aspect-ratio:3/4;object-fit:contain}
+  .larcier-feature-copy{padding:28px 23px 33px}
+  .larcier-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .larcier-gallery-heading{display:block;margin-top:25px}
+  .larcier-gallery-heading p{margin-top:6px}
+  .larcier-gallery a:last-child:nth-child(odd){grid-column:1/-1;aspect-ratio:2/1}
+}
+@media(max-width:450px){
+  .larcier-feature-copy h3{font-size:33px}
+  .larcier-feature-copy p{font-size:14px}
+  .larcier-feature{margin-bottom:52px}
+}
+@media(prefers-reduced-motion:reduce){.larcier-gallery a{transition:none}.larcier-gallery a:hover{transform:none}}
