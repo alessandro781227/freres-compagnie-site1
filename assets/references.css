@@ -171,3 +171,7 @@
   .trust-item-ifapme img,.trust-item-larcier img{max-width:105px;flex-basis:105px}
   .trust-item small{display:block;max-width:190px;margin:0;text-align:right;font-size:12px;line-height:1.5;color:#435848}
 }
+
+.ifapme-gallery a:last-child:nth-child(odd){grid-column:1/-1}
+.ifapme-gallery a:last-child:nth-child(odd) img{height:180px;object-fit:cover}
+@media(max-width:620px){.ifapme-gallery a:last-child:nth-child(odd) img{height:145px}}
