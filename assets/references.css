@@ -257,3 +257,13 @@
   .photo-viewer-next{right:11px}
   .photo-viewer-caption{padding:0 47px;font-size:11px}
 }
+
+/* Cadrage éditorial du visuel principal, original intégral conservé au clic. */
+.larcier-feature-inner{min-height:475px}
+.larcier-cover{position:relative;align-self:stretch;min-height:475px}
+.larcier-cover img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:50% 43%}
+@media(max-width:850px){
+  .larcier-feature-inner{min-height:0}
+  .larcier-cover{position:relative;min-height:0;height:auto;aspect-ratio:7/6}
+  .larcier-cover img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:50% 43%}
+}
