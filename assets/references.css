@@ -234,3 +234,26 @@
   .larcier-feature{margin-bottom:52px}
 }
 @media(prefers-reduced-motion:reduce){.larcier-gallery a{transition:none}.larcier-gallery a:hover{transform:none}}
+
+/* Lightbox natif et accessible : les liens originaux restent utilisables sans JavaScript. */
+.photo-viewer{position:fixed;inset:0;width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;padding:0;border:0;background:#070e0a;color:white;overscroll-behavior:contain}
+.photo-viewer::backdrop{background:rgba(1,7,3,.96)}
+.photo-viewer-inner{display:flex;align-items:center;justify-content:center;position:relative;width:100%;height:100%;padding:54px 60px 25px;box-sizing:border-box}
+.photo-viewer-figure{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;width:100%;height:100%;min-height:0;margin:0}
+.photo-viewer-image{display:block;max-width:100%;max-height:calc(100% - 44px);width:auto;height:auto;object-fit:contain;border-radius:2px}
+.photo-viewer-caption{font-size:12px;line-height:1.5;text-align:center;color:#d2dfd4;max-width:72ch}
+.photo-viewer-arrow,.photo-viewer-close{position:absolute;display:flex;align-items:center;justify-content:center;z-index:1;background:rgba(18,38,24,.86);color:#fff;border:1px solid rgba(255,255,255,.29);cursor:pointer;border-radius:50%;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.photo-viewer-close{top:max(12px,env(safe-area-inset-top));right:16px;width:42px;height:42px;font-size:31px}
+.photo-viewer-arrow{top:50%;transform:translateY(-50%);width:43px;height:56px;border-radius:12px;font-size:32px}
+.photo-viewer-prev{left:9px}
+.photo-viewer-next{right:9px}
+.photo-viewer-arrow:hover,.photo-viewer-close:hover{background:#295d35}
+.photo-viewer-arrow:focus-visible,.photo-viewer-close:focus-visible{outline:3px solid #9ae8ac;outline-offset:3px}
+@media(max-width:620px){
+  .photo-viewer-inner{padding:max(64px,env(safe-area-inset-top)) 9px max(20px,env(safe-area-inset-bottom))}
+  .photo-viewer-image{max-height:calc(100% - 65px)}
+  .photo-viewer-arrow{width:39px;height:49px;top:auto;bottom:max(12px,env(safe-area-inset-bottom));transform:none}
+  .photo-viewer-prev{left:11px}
+  .photo-viewer-next{right:11px}
+  .photo-viewer-caption{padding:0 47px;font-size:11px}
+}
