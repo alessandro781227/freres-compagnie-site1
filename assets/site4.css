@@ -40,7 +40,8 @@ footer{width:min(1280px,90vw);margin:auto;border-top:1px solid var(--line);paddi
   .project.big{grid-row:auto}
   .big .placeholder,.placeholder{height:450px}
   .contact{grid-template-columns:1fr}
-  .counter-grid{grid-template-columns:1fr}
+
+
 }
 @media(max-width:620px){
   .site-header{top:10px}
@@ -57,19 +58,29 @@ footer{width:min(1280px,90vw);margin:auto;border-top:1px solid var(--line);paddi
   .faces{gap:36px;opacity:.14;animation-duration:20s}
   .identity-caption{font-size:9px;line-height:1.5;letter-spacing:.20em}
   .identity-caption:after{bottom:27px}
-  .counter-journey{height:122vh}
-  .counter-journey .sticky{top:86px;height:calc(100vh - 108px)}
-  .counter-world{height:min(610px,80vh)}
-  .counter-panel{border-radius:26px}
-  .counter-label{left:16px;top:16px;font-size:9px;padding:9px 12px}
-  .counter-core{padding:76px 18px 28px}
-  .counter-number{font-size:74px}
-  .counter-overline{font-size:10px}
-  .counter-sub{font-size:14px}
-  .counter-progress-wrap{width:100%;margin-top:26px}
-  .counter-grid{width:100%;grid-template-columns:1fr;gap:10px;margin-top:24px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .phase{padding:14px 14px 13px;border-radius:16px}
-  .phase strong{font-size:16px}
+
+
   section.content{width:calc(100% - 34px);padding:90px 0}
   .section-head{display:block}
   .section-head p{margin-top:20px}
